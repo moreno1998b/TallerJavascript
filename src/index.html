@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Javascript</title>
+    <script type="text/javascript" src="resources/js/desafio1.js"></script>
+    <script type="text/javascript" src="resources/js/desafio2.js"></script>
+    <script type="text/javascript" src="resources/js/desafio3.js"></script>
+    <script type="text/javascript" src="resources/js/desafio4.js"></script>
+    <script type="text/javascript" src="resources/js/desafio5.js"></script>
+    <script type="text/javascript" src="resources/js/desafio6.js"></script>
+    <script type="text/javascript" src="resources/js/desafio7.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    <div class="container-fluid bg-primary" style="display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;">
+
+        <div class="card w-50">
+            <div class="card-header font-weight-bold">
+                DESAFIO 1
+            </div>
+            <div class="container pt-3">
+                <p class="font-weight-bold text-primary"> Escribe un programa que pregunte al usuario por el número de
+                    horas trabajadas y el coste por hora.
+                    Después debe mostrar por pantalla la paga que le corresponde.</p>
+            </div>
+            <div class="card-body">
+                <form action="" method="POST">
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Horas</span>
+                        <span class="input-group-text">T.</span>
+                        <input type="number" placeholder="Digite la cantidad de horas laboradas" class="form-control" required
+                            name="vhorast" id="vhorast" aria-label="Dollar amount (with dot and two decimal places)">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">$</span>
+                        <span class="input-group-text">/Hora</span>
+                        <input type="number" placeholder="($) Valor por hora laborada" class="form-control" required
+                            name="cantidadh" id="cantidadh"
+                            aria-label="Dollar amount (with dot and two decimal places)">
+                    </div>
+                    <button type="button" class="btn btn-info" onclick="calcularPago()">Calcular </button>
+                </form>
+                <div class="text-right" id="salida">
+
+                </div>
+            </div>
+        </div>
+        <div class="card w-50">
+            <div class="card-header font-weight-bold">
+                DESAFIO 2
+            </div>
+            <div class="container pt-3">
+                <p class="font-weight-bold text-primary"> Escribir un programa que pida al usuario su peso (en kg) y
+                    estatura (en metros), calcule el índice de masa corporal y lo almacene en una variable, y muestre
+                    por pantalla la frase Tu índice de masa corporal es imc donde IMC es el índice de masa corporal
+                    calculado redondeado con dos decimales. (kg/m2)</p>
+            </div>
+            <div class="card-body">
+                <form action="" method="POST">
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Vr.</span>
+                        <span class="input-group-text">Peso</span>
+                        <input type="number" placeholder="Digite su Peso en KG" class="form-control" name="vrkilos"
+                            id="vrkilos" aria-label="Dollar amount (with dot and two decimal places)" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Vr</span>
+                        <span class="input-group-text">/Estatura</span>
+                        <input type="number" placeholder="Digite su estatura en metros" class="form-control" required
+                            name="estatura" id="estatura" aria-label="Dollar amount (with dot and two decimal places)">
+                    </div>
+                    <button type="button" class="btn btn-info" onclick="calcularImc()">Calcular </button>
+                </form>
+                <div class="text-right" id="salida2">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="card w-50">
+            <div class="card-header font-weight-bold">
+                DESAFIO 3
+            </div>
+            <div class="container pt-3">
+                <p class="font-weight-bold text-primary"> Una tienda vende barras de dulce a $450 cada una. El dulce que
+                    no es el día tiene un descuento del 50%. Escribir un programa que comience leyendo el número de
+                    barras vendidas que no son del día. Después el programa debe mostrar el precio habitual de una barra
+                    de dulce, el descuento que se le hace por no ser fresca y el coste final total.</p>
+            </div>
+            <div class="card-body">
+                <form action="" method="POST">
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">C/</span>
+                        <span class="input-group-text">Vendidas Hoy</span>
+                        <input type="number" placeholder="Digite la cantidad de barras vendidas hoy"
+                            class="form-control" name="dulceHoy" id="dulceHoy"
+                            aria-label="Dollar amount (with dot and two decimal places)" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">C/</span>
+                        <span class="input-group-text">/Vendidas no de Hoy</span>
+                        <input type="number" placeholder="Digite la cantidad de barras vendidas que no son del dia"
+                            class="form-control" name="dulceOtrodia" id="dulceOtrodia"
+                            aria-label="Dollar amount (with dot and two decimal places)" required>
+                    </div>
+                    <button type="button" class="btn btn-info" onclick="calcularTotalVenta()">Calcular </button>
+                </form>
+                <div class="text-right" id="salida3">
+
+                </div>
+                <div class="text-right" id="salida3.1">
+
+                </div>
+                <div class="text-right" id="salida3.2">
+
+                </div>
+            </div>
+        </div>
+        <div class="card w-50">
+            <div class="card-header font-weight-bold">
+                DESAFIO 4
+            </div>
+            <div class="container pt-3">
+                <p class="font-weight-bold text-primary"> Escribir un programa que pida al usuario X cantidad de números
+                    en una lista y que luego de ingresar esa cantidad de números retorne la suma de todos ellos.<strong
+                        class="text-dark">(La cantidad x de numeros es generada de manera aleatoria.)</strong></p>
+            </div>
+            <div class="card-body">
+                <form action="" method="POST">
+
+
+                    <button type="button" class="btn btn-info" onclick="calcularDatos()">Iniciar Calculo de Datos
+                    </button>
+                </form>
+                <div class="text-right" id="salida4">
+
+                </div>
+            </div>
+        </div>
+        <div class="card w-50">
+            <div class="card-header font-weight-bold">
+                DESAFIO 5
+            </div>
+            <div class="container pt-3">
+                <p class="font-weight-bold text-primary"> Escribir un programa que pida al usuario una palabra y muestre
+                    por pantalla si es un palíndromo.</p>
+            </div>
+            <div class="card-body">
+                <form action="" method="POST">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Verificar</span>
+                        <span class="input-group-text">Palindromo: </span>
+                        <input type="text" placeholder="Digite una palabra para verificar si es un palindromo" required
+                            class="form-control" name="palabra" id="palabra">
+                    </div>
+                    <button type="button" class="btn btn-info" onclick="validarPalindromo()">Verificar </button>
+                </form>
+                <div class="text-right" id="salida5">
+
+                </div>
+            </div>
+        </div>
+        <div class="card w-50">
+            <div class="card-header font-weight-bold">
+                DESAFIO 6
+            </div>
+            <div class="container pt-3">
+                <p class="font-weight-bold text-primary"> Escribir un programa que pregunte por una muestra de números,
+                    separados por comas, los guarde en un arreglo y muestre por pantalla su media y desviación estándar.
+                </p>
+            </div>
+            <div class="card-body">
+                <form action="" method="POST">
+                    <div class="input-group mb-3">
+
+                        <input type="text" placeholder="Digite una muestra de números , separados por coma"
+                            class="form-control" name="muestra" id="muestra" required>
+                    </div>
+                    <button type="button" class="btn btn-info" onclick="procesarMuestra()">Enviar </button>
+                </form>
+                <div class="text-right" id="salida6">
+
+                </div>
+                <div class="text-right" id="salida6.1">
+
+                </div>
+            </div>
+        </div>
+        <div class="card w-50">
+            <div class="card-header font-weight-bold">
+                DESAFIO 7
+            </div>
+            <div class="container pt-3">
+                <p class="font-weight-bold text-primary"> Escribir un programa que guarde en un objeto los nombres y
+                    precios de frutas, pregunte al usuario por una fruta, un número de kilos y muestre por pantalla el
+                    precio de ese número de kilos de fruta. Si la fruta no está en el diccionario debe mostrar un
+                    mensaje informando de ello.</p>
+            </div>
+            <div class="card-body">
+                <form action="" method="POST">
+
+                    <div class="input-group mb-3">
+                        <input type="text" placeholder="Digite el nombre de la fruta que desea" class="form-control" required
+                            name="fruta" id="fruta">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="number" placeholder="Cantidad de Kilos que desea comprar" class="form-control" 
+                            name="kilos" id="kilos" required>
+                    </div>
+                    <button type="button" class="btn btn-info" onclick="calcularPrecioFruta()">Calcular </button>
+                </form>
+                <div class="text-right" id="salida7">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
