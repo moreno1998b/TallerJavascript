@@ -1,20 +1,24 @@
+var x = 0;
+var baseNumeros = Array();
+function captura() {
+    baseNumeros[x] = document.getElementById("numero").value;
+    x++;
+    document.getElementById("numero").value = "";
+    console.log(baseNumeros);
+}
 
-function calcularDatos() {
-    // var cantidadpedir = Math.floor(Math.random() * 11);
-    var cantidadpedir = Math.round(Math.random() * (10 - 2) + 2);
-    alert('Le pedire ' + cantidadpedir + " Numeros para calcular su suma total");
-    var numeros = [];
-    var cont = 0;
-    var x;
 
-    for (i = 0; i < cantidadpedir; i++) {
-        var x = prompt("Ingresa un numero:", "");
-        numeros.push(Number(x));
+function sumaArreglo() {
+    var suma = 0;
+    for (var index = 0; index < baseNumeros.length; index++) {
+        suma += parseInt(baseNumeros[index]);
+        console.log("sumando  de a " + baseNumeros[index] + "       :" + suma);
     }
-    for (i = 0; i < numeros.length; i++) {
-        cont += numeros[i];
-        console.log(numeros[i]);
-    }
-
-    document.getElementById("salida4").innerHTML = "Cantidad de datos :" + numeros.length + " - Resultado: " + cont;
+    console.log("resultado " + suma);
+    document.getElementById("salida4").innerHTML = "resultado " + suma;
+}
+function reiniciar(){
+    x=0;
+    baseNumeros = Array();
+    document.getElementById("numero").value = 0;
 }

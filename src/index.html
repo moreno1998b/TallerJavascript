@@ -37,13 +37,14 @@
                     Después debe mostrar por pantalla la paga que le corresponde.</p>
             </div>
             <div class="card-body">
-                <form     method="POST">
+                <form method="POST">
 
                     <div class="input-group mb-3">
                         <span class="input-group-text">Horas</span>
                         <span class="input-group-text">T.</span>
-                        <input type="number" placeholder="Digite la cantidad de horas laboradas" class="form-control" required
-                            name="vhorast" id="vhorast" aria-label="Dollar amount (with dot and two decimal places)">
+                        <input type="number" placeholder="Digite la cantidad de horas laboradas" class="form-control"
+                            required name="vhorast" id="vhorast"
+                            aria-label="Dollar amount (with dot and two decimal places)">
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text">$</span>
@@ -55,7 +56,7 @@
                     <button type="button" class="btn btn-info" onclick="calcularPago()">Calcular </button>
                 </form>
                 <div class="text-right" id="salida">
- 
+
                 </div>
             </div>
         </div>
@@ -70,7 +71,7 @@
                     calculado redondeado con dos decimales. (kg/m2)</p>
             </div>
             <div class="card-body">
-                <form     method="POST">
+                <form method="POST">
 
                     <div class="input-group mb-3">
                         <span class="input-group-text">Vr.</span>
@@ -103,7 +104,7 @@
                     de dulce, el descuento que se le hace por no ser fresca y el coste final total.</p>
             </div>
             <div class="card-body">
-                <form     method="POST">
+                <form method="POST">
 
                     <div class="input-group mb-3">
                         <span class="input-group-text">C/</span>
@@ -138,14 +139,20 @@
             </div>
             <div class="container pt-3">
                 <p class="font-weight-bold text-primary"> Escribir un programa que pida al usuario X cantidad de números
-                    en una lista y que luego de ingresar esa cantidad de números retorne la suma de todos ellos.<strong
-                        class="text-dark">(La cantidad x de numeros es generada de manera aleatoria.)</strong></p>
+                    en una lista y que luego de ingresar esa cantidad de números retorne la suma de todos ellos.</p>
             </div>
             <div class="card-body">
-                <form     method="POST">
+                <form method="POST">
+                    <div class="input-group mb-3">
+                        <input type="number" placeholder="Digite un número" class="form-control" name="numero"
+                            id="numero" aria-label="Dollar amount (with dot and two decimal places)" required>
+                    </div>
 
-
-                    <button type="button" class="btn btn-info" onclick="calcularDatos()">Iniciar Calculo de Datos
+                    <button type="button" class="btn btn-info" onclick="captura()">Añadir
+                    </button>
+                    <button type="button" class="btn btn-info" onclick="sumaArreglo()">Resultado
+                    </button>
+                    <button type="button" class="btn btn-info" onclick="reiniciar()">Reiniciar
                     </button>
                 </form>
                 <div class="text-right" id="salida4">
@@ -162,7 +169,7 @@
                     por pantalla si es un palíndromo.</p>
             </div>
             <div class="card-body">
-                <form     method="POST">
+                <form method="POST">
                     <div class="input-group mb-3">
                         <span class="input-group-text">Verificar</span>
                         <span class="input-group-text">Palindromo: </span>
@@ -186,7 +193,7 @@
                 </p>
             </div>
             <div class="card-body">
-                <form     method="POST">
+                <form method="POST">
                     <div class="input-group mb-3">
 
                         <input type="text" placeholder="Digite una muestra de números , separados por coma"
@@ -213,14 +220,14 @@
                     mensaje informando de ello.</p>
             </div>
             <div class="card-body">
-                <form     method="POST">
+                <form method="POST">
 
                     <div class="input-group mb-3">
-                        <input type="text" placeholder="Digite el nombre de la fruta que desea" class="form-control" required
-                            name="fruta" id="fruta">
+                        <input type="text" placeholder="Digite el nombre de la fruta que desea" class="form-control"
+                            required name="fruta" id="fruta">
                     </div>
                     <div class="input-group mb-3">
-                        <input type="number" placeholder="Cantidad de Kilos que desea comprar" class="form-control" 
+                        <input type="number" placeholder="Cantidad de Kilos que desea comprar" class="form-control"
                             name="kilos" id="kilos" required>
                     </div>
                     <button type="button" class="btn btn-info" onclick="calcularPrecioFruta()">Calcular </button>
